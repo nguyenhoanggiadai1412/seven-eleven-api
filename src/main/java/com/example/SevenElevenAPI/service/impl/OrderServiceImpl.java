@@ -28,8 +28,9 @@ public class OrderServiceImpl implements OrderService {
 
     Order order = Order.builder()
             .customerName(request.getCustomerName())
-            .customerPhone(request.getCustomerPhone())
-            .customerAddress(request.getCustomerAddress())
+            .phone(request.getPhone())
+            .address(request.getAddress())
+            .note(request.getNote())
             .status(OrderStatus.PENDING)
             .orderItems(new ArrayList<>())
             .build();
@@ -110,8 +111,9 @@ public class OrderServiceImpl implements OrderService {
     return OrderResponse.builder()
             .id(order.getId())
             .customerName(order.getCustomerName())
-            .customerPhone(order.getCustomerPhone())
-            .customerAddress(order.getCustomerAddress())
+            .phone(order.getPhone())
+            .address(order.getAddress())
+            .note(order.getNote())
             .totalAmount(order.getTotalAmount())
             .status(order.getStatus())
             .createdAt(order.getCreatedAt())

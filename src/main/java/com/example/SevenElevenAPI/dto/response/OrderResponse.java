@@ -17,9 +17,11 @@ public class OrderResponse {
 
   private String customerName;
 
-  private String customerPhone;
+  private String phone;
 
-  private String customerAddress;
+  private String address;
+
+  private String note;
 
   private Double totalAmount;
 

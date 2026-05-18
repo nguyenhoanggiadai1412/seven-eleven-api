@@ -22,9 +22,12 @@ public class Order {
 
   private String customerName;
 
-  private String customerPhone;
+  private String phone;
 
-  private String customerAddress;
+  private String address;
+
+  @Column(columnDefinition = "TEXT")
+  private String note;
 
   private Double totalAmount;
 

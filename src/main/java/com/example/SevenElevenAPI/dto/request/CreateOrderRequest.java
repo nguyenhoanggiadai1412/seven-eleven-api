@@ -15,11 +15,16 @@ public class CreateOrderRequest {
   @NotBlank
   private String customerName;
 
+  // đổi customerPhone -> phone
   @NotBlank
-  private String customerPhone;
+  private String phone;
 
+  // đổi customerAddress -> address
   @NotBlank
-  private String customerAddress;
+  private String address;
+
+  // thêm note
+  private String note;
 
   @NotEmpty
   @Valid
